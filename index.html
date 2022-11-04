@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    p {
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -19,36 +21,36 @@
   <main>
     <section>
       <div class="image">
-        <img src="./images/pattern-background-desktop.svg" alt="">
+        <img src="./images/illustration-hero.svg" alt="">
       </div>
 
-      <div class="header">
-        <h1>Order Summary</h1>
-      </div>
-      
-      <div class="text">
-        <p> 
-          You can now listen to millions of songs, audiobooks, and podcasts on any 
-          device anywhere you like!
-        </p>
-      </div>
-
-      <div class="middleTexts">
-        <div class="music">
-          <img src="./images/icon-music.svg" alt="">
+      <div class="content">
+        <div class="header">
+          <h1>Order Summary</h1>
         </div>
-        <div class="annualPlan">
-          <p>Annual Plan</p>
-          <p>$55.99/year</p>
+        
+        <div class="text">
+          <p> 
+            You can now listen to millions of songs, audiobooks, and podcasts on any 
+            device anywhere you like!
+          </p>
         </div>
-        <div class="change">
-          <p>Change</p>
+  
+        <div class="middleTexts">
+          <div class="music">
+            <img src="./images/icon-music.svg" alt="">
+            <p>Annual Plan</p>
+            <p>$55.99/year</p>
+          </div>
+          <div class="change">
+            <p>Change</p>
+          </div>
         </div>
-      </div>
-
-      <div class="buttons">
-        <button>Proceed to Payment</button>
-        <p>Cancel Order</p>
+  
+        <div class="buttons">
+          <button>Proceed to Payment</button>
+          <p>Cancel Order</p>
+        </div>
       </div>
     </section>
   </main>
