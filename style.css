@@ -117,7 +117,11 @@ button:hover{
 
 
 footer{
-    display: none;
+    position: absolute;
+    bottom: 3rem;
+    right: 50%;
+    transform: translateX(50%);    
+
 }
 
 @media screen and (max-width: 425px){
@@ -145,6 +149,12 @@ footer{
     button{
         padding: 1.1rem 4.6rem;
     }
+    
+    footer{
+        width: 350px;
+        font-size: 15px;
+        bottom: 16px;
+    }
 }
 
 @media screen and (max-width: 325px) {
@@ -161,5 +171,10 @@ footer{
     }
     button{
         padding: 1.3rem 3.7rem;
+    }
+
+    footer{
+        font-size: 14px;
+        bottom: 5px;
     }
 }
