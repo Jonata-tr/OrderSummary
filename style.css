@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+:root{
+    --pale-blue:hsl(225, 100%, 94%);
+    --brithg-blue: hsl(245, 75%, 52%);
+    --brithg-blue-op: hsla(245, 75%, 52%, 0.199);
+    --brithg-blue-hover: hsla(245, 75%, 52%, 0.836);
+
+    /* Neutral colors */
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desatureted-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,9 +20,11 @@
 }
 
 body{
-    background: url(./images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    background-image: url(./images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 0 -40%;
     font-family: 'Red Hat Display', sans-serif;
     
     height: 100vh;
@@ -18,31 +33,133 @@ body{
 }
 
 main{
-    width: 21rem;
-    border-radius: 2rem;
-    background-color: #e2e2e2;
+    width: 24rem;
+    border-radius: 1.2rem;
+    background-color: var(--very-pale-blue);
     text-align: center;
-}
-
-main div:not(:last-child){
-    margin-bottom: 2rem;
+    box-shadow: 10px 16px 16px 0 var(--brithg-blue-op);
 }
 
 .content{
-    margin: 2rem;
+    margin: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
+    gap: 1rem;    
 }
 
+.text p{
+    text-align:center;
+    padding: 0 5px;
+}
+.text{
+    margin-bottom: 1.2rem;
+}
+
+/* CONTENT COLORS AND PARAMETERS */
+
+.content h1, span{
+    color: var(--dark-blue);
+    font-weight: 800;
+}
+
+.content p{
+    color: var(--desatureted-blue);
+}
+
+.change{
+    text-decoration: underline;
+    color: var(--brithg-blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.change:hover {
+    color: var(--brithg-blue-hover);
+}
+/* END */
 .image img{
-    width: 21rem;
-    border-radius: 2rem 2rem 0 0;
+    width: 24rem;
+    border-radius: 1.2rem 1.2rem 0 0;
 }
 
-.middleTexts,
-.music {
+.middleTexts{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    margin: 1.6rem 1.5rem;
+}
+
+.img {
+    display: grid;
+    grid-template-columns: 65px auto;
+}
+
+button{
+    background-color: var(--brithg-blue);
+    color: #fff;
+    font-size: 14px;
+    padding: .8rem 5rem;
+    border: none;
+    border-radius: 11px;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 16px .1px var(--brithg-blue-op);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--brithg-blue-hover);
+}
+.buttons p{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+footer{
+    display: none;
+}
+
+@media screen and (max-width: 425px){
+
+    body{
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+
+    main{
+        width: 21rem;      
+    }
+    
+    .content{
+        gap: 1rem;    
+    }
+    
+    .middleTexts{
+        margin: .6rem;
+    }
+    
+    .image img {
+        width: 21rem;
+    }
+    
+    button{
+        padding: 1.1rem 4.6rem;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    main{
+        width: 19rem;      
+    }
+    
+    .image img {
+        width: 19rem;
+    }
+    
+    .text p{
+        font-size: 14px;
+    }
+    button{
+        padding: 1.3rem 3.7rem;
+    }
 }
